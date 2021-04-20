@@ -4,11 +4,19 @@
   "main": "index.js",
   "author": "t7yang <t7yang@gmail.com>",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "build": "tsc --build",
-    "start": "yarn build && node dist/index.js"
+    "build:watch": "tsc --build --watch --noClear",
+    "build:tsc-watch": "tsc-watch --build --onSuccess \"node ./dist/index.js\"",
+    "start": "yarn build:tsc-watch"
+  },
+  "dependencies": {
+    "koa": "^2.13.1"
   },
   "devDependencies": {
+    "@types/koa": "^2.13.1",
+    "tsc-watch":"^4.2.9",
     "typescript": "^3.8.3"
   }
 }

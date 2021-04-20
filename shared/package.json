@@ -4,7 +4,12 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "t7yang <t7yang@gmail.com>",
+  "private": true,
   "license": "MIT",
+  "scripts": {
+    "build": "tsc --build",
+    "build:watch": "tsc --build -w"
+  },
   "devDependencies": {
     "typescript": "^3.8.3"
   }
